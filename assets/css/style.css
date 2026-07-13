@@ -638,6 +638,33 @@ img.zoomable { cursor: zoom-in; }
   .resume-row__date { color: var(--ink); font-weight: 500; }
 }
 
+/* Компания с несколькими должностями: название компании — один раз сверху,
+   а срок работы стоит уже слева от конкретной должности, не от компании. */
+.resume-company { padding: 22px 0; }
+.resume-company + .resume-company { border-top: 1px solid var(--line); }
+.resume-company > h3 { margin-bottom: 4px; }
+
+.resume-position {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  padding-top: 16px;
+}
+.resume-position__date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  padding-top: 2px;
+}
+.resume-position__body ul { margin: 0; padding-left: 18px; }
+.resume-position__body li { margin-bottom: 6px; color: var(--ink-soft); }
+.resume-position__body li::marker { color: var(--accent); }
+
+@media (max-width: 620px) {
+  .resume-position { grid-template-columns: 1fr; gap: 6px; }
+  .resume-position__date { color: var(--ink); font-weight: 500; }
+}
+
 /* ==========================================================================
    ФУТЕР
    ========================================================================== */
