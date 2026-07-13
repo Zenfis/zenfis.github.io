@@ -625,7 +625,8 @@ img.zoomable { cursor: zoom-in; }
 }
 .resume-row__body h3 { margin-bottom: 4px; }
 .resume-row__role {
-  color: var(--ink-soft);
+  color: var(--ink);
+  font-weight: 600;
   font-size: 0.95rem;
   margin-bottom: 10px;
 }
